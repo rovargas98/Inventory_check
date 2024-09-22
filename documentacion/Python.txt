@@ -1,0 +1,18 @@
+
+En Python, la sentencia with se utiliza en el manejo de excepciones para hacer el código más limpio y mucho más legible.
+Simplifica la gestión de recursos comunes como los flujos de archivos. Observe en el siguiente ejemplo de código cómo el
+ uso de la sentencia with hace que el código sea más limpio.
+
+# file handling
+
+# 1) without using with statement
+file = open('file_path', 'w')
+file.write('hello world !')
+file.close()
+
+# 2) without using with statement
+file = open('file_path', 'w')
+try:
+    file.write('hello world')
+finally:
+    file.close()
