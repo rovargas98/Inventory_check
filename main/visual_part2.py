@@ -5,7 +5,7 @@ import os
 
 # Creo la ventana
 window = tk.Tk()
-window.title("Piezas en Power")
+window.title("Piezas de Power")
 
 # Genera un margen interior en el programa
 frame = tk.Frame(window)
@@ -13,7 +13,7 @@ frame.pack()
 
 # Guardando la información de usuario
 user_info_frame = tk.LabelFrame(frame, text="Nueva parte")
-user_info_frame.grid(row=0, column=0, sticky="news", padx=20, pady=20 )
+user_info_frame.grid(row=0, column=0, sticky="news", padx=20, pady=20)
 
 # Creando los widgets dentro del grid
 modelo_label = tk.Label(user_info_frame, text="Modelo")
@@ -22,7 +22,7 @@ modelo_label.grid(row=0, column=0)
 model_entry.grid(row=1, column=0)
 
 marca_label = tk.Label(user_info_frame, text="Marca")
-title_combobox = ttk.Combobox(user_info_frame, value=["iphone", "samsung", "xiaomi", "oppo"])
+title_combobox = ttk.Combobox(user_info_frame, values=["iphone", "samsung", "xiaomi", "oppo"])
 marca_label.grid(row=0, column=1)
 title_combobox.grid(row=1, column=1)
 
@@ -32,7 +32,7 @@ descripcion_label.grid(row=0, column=2)
 descripcion_entry.grid(row=1, column=2)
 
 color_label = tk.Label(user_info_frame, text="Color")
-color_entry = ttk.Combobox(user_info_frame, value=["verde", "azul", "naranja", "amarillo", "rojo"])
+color_entry = ttk.Combobox(user_info_frame, values=["verde", "azul", "naranja", "amarillo", "rojo"])
 color_label.grid(row=0, column=3)
 color_entry.grid(row=1, column=3)
 
@@ -104,7 +104,7 @@ def export_to_excel():
 
 # Crear un botón para exportar los datos
 export_button = tk.Button(frame, text="Exportar a Excel", command=export_to_excel)
-export_button.grid(row=2, column=0, sticky="news", padx=20, pady=20 )  # Asigna una nueva fila para el botón
+export_button.grid(row=2, column=0, sticky="news", padx=20, pady=20)  # Asigna una nueva fila para el botón
 
 # Ejecutar la ventana
 window.mainloop()
